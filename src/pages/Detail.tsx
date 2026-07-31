@@ -64,7 +64,7 @@ export default function Detail() {
       {/* backdrop hero */}
       <div className="relative h-[54vh] min-h-[380px] w-full overflow-hidden">
         <img src={backdrop(title.backdrop_path)} alt="" className="h-full w-full object-cover object-top" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/80 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink-950/80 to-transparent" />
         <div className="absolute left-4 top-4 sm:left-8 sm:top-6">
           <Link
@@ -109,18 +109,18 @@ export default function Detail() {
                 </div>
               </div>
               <div className="h-10 w-px bg-white/10" />
-              <div className="flex flex-wrap gap-x-5 gap-y-1 text-sm text-white/70">
+              <div className="flex flex-wrap gap-x-5 gap-y-1 text-sm font-medium text-white/90">
                 <span className="flex items-center gap-1.5">
-                  <Calendar className="h-4 w-4 text-white/40" /> {yearOf(title.release_date)}
+                  <Calendar className="h-4 w-4 text-white/70" /> {yearOf(title.release_date)}
                 </span>
                 {title.media_type === 'tv' ? (
                   <span className="flex items-center gap-1.5">
-                    <Tv className="h-4 w-4 text-white/40" /> {title.number_of_seasons ?? '—'} season
+                    <Tv className="h-4 w-4 text-white/70" /> {title.number_of_seasons ?? '—'} season
                     {title.number_of_seasons === 1 ? '' : 's'}
                   </span>
                 ) : (
                   <span className="flex items-center gap-1.5">
-                    <Clock className="h-4 w-4 text-white/40" /> {runtimeLabel(title.runtime)}
+                    <Clock className="h-4 w-4 text-white/70" /> {runtimeLabel(title.runtime)}
                   </span>
                 )}
                 <span className="flex items-center gap-1.5">
